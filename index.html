@@ -17,132 +17,136 @@
     <title>DrivenEats</title>
   </head>
   <body>
-    <!-- Open Top Menu -->
-    <div class="top-menu">
-      <h1>DrivenEats</h1>
-      <h2>Sua comida em 6 minutos</h2>
-    </div>
-    <!-- Close Top Menu -->
-    <!-- Open Menu -->
-    <div class="menu">
-      <h1>Primeiro, seu prato</h1>
-      <!-- Open Options -->
-      <div class="options food">
-        <div onclick="orderFood('.plate1')" class="plate1 transparent">
-          <img src="img/frango_yin_yang.png" />
-          <h3>Frango Yin Yang</h3>
-          <h4>Um pouco de batata, um pouco de salada</h4>
-          <h2>R$ 14,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
-        <div onclick="orderFood('.plate2')" class="plate2 transparent">
-          <img src="img/frango_yin_yang.png" />
-          <h3>Frango Yin Yang</h3>
-          <h4>Um pouco de batata, um pouco de salada</h4>
-          <h2>R$ 14,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
-        <div onclick="orderFood('.plate3')" class="plate3 transparent">
-          <img src="img/frango_yin_yang.png" />
-          <h3>Frango Yin Yang</h3>
-          <h4>Um pouco de batata, um pouco de salada</h4>
-          <h2>R$ 14,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
-        <div onclick="orderFood('.plate4')" class="plate4 transparent">
-          <img src="img/frango_yin_yang.png" />
-          <h3>Frango Yin Yang</h3>
-          <h4>Um pouco de batata, um pouco de salada</h4>
-          <h2>R$ 14,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
+    <!-- Open Content -->
+    <div class="content">
+      <!-- Open Top Menu -->
+      <div class="top-menu">
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
       </div>
-      <!-- Close Options -->
-    </div>
-    <!-- Close Menu -->
-    <!-- Open Menu -->
-    <div class="menu">
-      <h1>Agora, sua bebida</h1>
-      <!-- Open Options -->
-      <div class="options drink">
-        <div onclick="orderDrink('.drink1')" class="drink1 transparent">
-          <img src="img/coquinha_gelada.png" />
-          <h3>Coquinha Gelada</h3>
-          <h4>Lata 350ml</h4>
-          <h2>R$ 4,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
+      <!-- Close Top Menu -->
+      <!-- Open Menu -->
+      <div class="menu">
+        <h1>Primeiro, seu prato</h1>
+        <!-- Open Options -->
+        <div class="options food">
+          <div onclick="orderFood(this)" class="transparent">
+            <img src="img/frango_yin_yang.png" />
+            <h3>Frango Yin Yang</h3>
+            <h4>Um pouco de batata, um pouco de salada</h4>
+            <h2>R$ <span>14,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderFood(this)" class="transparent">
+            <img src="img/lasanha.jpg" />
+            <h3>Lasanha de Carne</h3>
+            <h4>Lasanha recheada com carne moída</h4>
+            <h2>R$ <span>15,50</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderFood(this)" class="transparent">
+            <img src="img/macarrao.jpg" />
+            <h3>Macarrão</h3>
+            <h4>Molho 4 queijos com pedaços de bacon</h4>
+            <h2>R$ <span>16,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderFood(this)" class="transparent">
+            <img src="img/fricasse.jpg" />
+            <h3>Fricassê</h3>
+            <h4>Franguinho com batata palha por cima</h4>
+            <h2>R$ <span>24,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
         </div>
-        <div onclick="orderDrink('.drink2')" class="drink2 transparent">
-          <img src="img/coquinha_gelada.png" />
-          <h3>Coquinha Gelada</h3>
-          <h4>Lata 350ml</h4>
-          <h2>R$ 4,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
-        <div onclick="orderDrink('.drink3')" class="drink3 transparent">
-          <img src="img/coquinha_gelada.png" />
-          <h3>Coquinha Gelada</h3>
-          <h4>Lata 350ml</h4>
-          <h2>R$ 4,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
-        <div onclick="orderDrink('.drink4')" class="drink4 transparent">
-          <img src="img/coquinha_gelada.png" />
-          <h3>Coquinha Gelada</h3>
-          <h4>Lata 350ml</h4>
-          <h2>R$ 4,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
+        <!-- Close Options -->
       </div>
-      <!-- Close Options -->
-    </div>
-    <!-- Close Menu -->
-    <!-- Open Menu -->
-    <div class="menu">
-      <h1>Por fim, sua sobremesa</h1>
-      <!-- Open Options -->
-      <div class="options dessert">
-        <div onclick="orderDessert('.dessert1')" class="dessert1 transparent">
-          <img src="img/pudim.png" />
-          <h3>Pudim</h3>
-          <h4>Apenas pudim</h4>
-          <h2>R$ 7,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
+      <!-- Close Menu -->
+      <!-- Open Menu -->
+      <div class="menu">
+        <h1>Agora, sua bebida</h1>
+        <!-- Open Options -->
+        <div class="options drink">
+          <div onclick="orderDrink(this)" class="transparent">
+            <img src="img/coquinha_gelada.png" />
+            <h3>Coquinha Gelada</h3>
+            <h4>Lata 350ml</h4>
+            <h2>R$ <span>4,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderDrink(this)" class="transparent">
+            <img src="img/suco.png" />
+            <h3>Suquinho Geladinho</h3>
+            <h4>Suco de limão copo 300ml</h4>
+            <h2>R$ <span>5,50</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderDrink(this)" class="transparent">
+            <img src="img/agua.jpg" />
+            <h3>Garrafa de Água</h3>
+            <h4>Garrafa 500ml</h4>
+            <h2>R$ <span>5,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderDrink(this)" class="transparent">
+            <img src="img/fruki.jpg" />
+            <h3>Fruki Bergamota</h3>
+            <h4>Lata 350ml</h4>
+            <h2>R$ <span>3,39</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
         </div>
-        <div onclick="orderDessert('.dessert2')" class="dessert2 transparent">
-          <img src="img/pudim.png" />
-          <h3>Pudim</h3>
-          <h4>Apenas pudim</h4>
-          <h2>R$ 7,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
-        <div onclick="orderDessert('.dessert3')" class="dessert3 transparent">
-          <img src="img/pudim.png" />
-          <h3>Pudim</h3>
-          <h4>Apenas pudim</h4>
-          <h2>R$ 7,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
-        <div onclick="orderDessert('.dessert4')" class="dessert4 transparent">
-          <img src="img/pudim.png" />
-          <h3>Pudim</h3>
-          <h4>Apenas pudim</h4>
-          <h2>R$ 7,90</h2>
-          <ion-icon name="checkmark-circle"></ion-icon>
-        </div>
+        <!-- Close Options -->
       </div>
-      <!-- Close Options -->
+      <!-- Close Menu -->
+      <!-- Open Menu -->
+      <div class="menu">
+        <h1>Por fim, sua sobremesa</h1>
+        <!-- Open Options -->
+        <div class="options dessert">
+          <div onclick="orderDessert(this)" class="transparent">
+            <img src="img/pudim.png" />
+            <h3>Pudim</h3>
+            <h4>Apenas pudim</h4>
+            <h2>R$ <span>7,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderDessert(this)" class="transparent">
+            <img src="img/torta bis.png" />
+            <h3>Torta Gelada De Bis</h3>
+            <h4>Bem gostosa e geladinha</h4>
+            <h2>R$ <span>15,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderDessert(this)" class="transparent">
+            <img src="img/mousse.jpg" />
+            <h3>Mousse de Chocolate</h3>
+            <h4>Bem cremoso e de chocolate importado</h4>
+            <h2>R$ <span>9,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          <div onclick="orderDessert(this)" class="transparent">
+            <img src="img/brownie.jpg" />
+            <h3>Brownie Vegano</h3>
+            <h4>Para os veganos de plantão :)</h4>
+            <h2>R$ <span>16,90</span></h2>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+        </div>
+        <!-- Close Options -->
+      </div>
+      <!-- Close Menu -->
+      <!-- Open Bottom Menu -->
+      <div class="bottom-menu">
+        <a target='_blank' href="">
+          <button onclick="confirmOrder(this)" class="button-color">
+            <h2>Selecione os 3 itens para fechar o pedido</h2>
+          </button>
+        </a>
+      </div>
+      <!-- Close Bottom Menu -->
     </div>
-    <!-- Close Menu -->
-    <!-- Open Bottom Menu -->
-    <div class="bottom-menu">
-      <button
-        onclick="confirmOrder('.order-button')"
-        class="order-button button-color"
-      >
-        <h2>Selecione os 3 itens para fechar o pedido</h2>
-      </button>
-    </div>
+    <!-- Close Content -->
     <!-- Ion-icons Script -->
     <script
       type="module"

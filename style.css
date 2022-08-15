@@ -6,7 +6,7 @@ body {
   background-color: lightblue;
   padding: 92px 0;
 }
-body > div {
+.content > div {
   width: 414px;
 }
 h1 {
@@ -38,6 +38,9 @@ ion-icon {
 }
 .button-color {
   background-color: #cbcbcb;
+}
+.hidden{
+  display: none;
 }
 
 /* Top Menu */
