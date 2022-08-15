@@ -138,13 +138,46 @@
       <!-- Close Menu -->
       <!-- Open Bottom Menu -->
       <div class="bottom-menu">
-        <a target='_blank' href="">
-          <button onclick="confirmOrder(this)" class="button-color">
-            <h2>Selecione os 3 itens para fechar o pedido</h2>
-          </button>
-        </a>
+        <button onclick="confirmOrder()" class="button-color">
+          <h2>Selecione os 3 itens para fechar o pedido</h2>
+        </button>
       </div>
       <!-- Close Bottom Menu -->
+      <div class="confirm-menu hidden">
+        <div>
+          <h3>Confirme seu pedido</h3>
+          <div class="value">
+            <div class="text">
+              <h2>
+                <span class="food-name">order name</span>
+                <span class="right food-price">price</span>
+              </h2>
+            </div>
+            <div class="text">
+              <h2>
+                <span class="drink-name">order name</span>
+                <span class="right drink-price">price</span>
+              </h2>
+            </div>
+            <div class="text">
+              <h2>
+                <span class="dessert-name">order name</span>
+                <span class="right dessert-price">price</span>
+              </h2>
+            </div>
+            <div class="text">
+              <h3>
+                <span>TOTAL</span>
+                <span class="right total">price</span>
+              </h3>
+            </div>
+          </div>
+          <a onclick="openWhatsApp()" target="_blank" href=""
+            ><button><h3>Tudo certo, pode pedir!</h3></button></a
+          >
+          <h3 onclick="closeMenu()" class="cancel">Cancelar</h3>
+        </div>
+      </div>
     </div>
     <!-- Close Content -->
     <!-- Ion-icons Script -->

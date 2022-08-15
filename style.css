@@ -5,6 +5,8 @@
 body {
   background-color: lightblue;
   padding: 92px 0;
+  display: flex;
+  justify-content: center;
 }
 .content > div {
   width: 414px;
@@ -39,8 +41,11 @@ ion-icon {
 .button-color {
   background-color: #cbcbcb;
 }
-.hidden{
+.hidden {
   display: none;
+}
+.content {
+  position: relative;
 }
 
 /* Top Menu */
@@ -50,7 +55,7 @@ ion-icon {
   padding-left: 21px;
   position: fixed;
   top: 0;
-  left: 0;
+  left: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -116,7 +121,7 @@ ion-icon {
   height: 92px;
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,6 +142,65 @@ ion-icon {
   border: none;
 }
 
+/* Confirm Menu */
+.confirm-menu {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: center;
+  z-index: 2;
+}
+.confirm-menu > div {
+  width: 377px;
+  height: 353px;
+  background-color: #50d074;
+  border-radius: 9px;
+  padding: 21px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.value {
+  width: 100%;
+  height: 150px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text {
+  position: relative;
+}
+.confirm-menu h2 {
+  font-size: 22px;
+  color: #ffffff;
+}
+.confirm-menu h3 {
+  font-size: 22px;
+  color: #ffffff;
+}
+.confirm-menu button {
+  width: 329px;
+  height: 52px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.cancel {
+  margin-top: 5px;
+  cursor: pointer;
+}
+.confirm-menu button h3 {
+  color: #50d074;
+}
+.right {
+  position: absolute;
+  right: 0;
+}
+
 /* Interactive Classes */
 .selected {
   box-shadow: inset 0px 0px 0px 5px #32b72f;
@@ -147,4 +211,9 @@ ion-icon {
 }
 .hover {
   cursor: pointer;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

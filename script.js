@@ -15,6 +15,8 @@ function orderFood(div) {
   FoodSelected = FoodSelected.innerHTML;
   makeGreen();
   Price();
+  openWhatsApp();
+  orderText();
 }
 
 //Drink Ordering
@@ -34,6 +36,8 @@ function orderDrink(div) {
   DrinkSelected = DrinkSelected.innerHTML;
   makeGreen();
   Price();
+  openWhatsApp();
+  orderText();
 }
 
 //Dessert Ordering
@@ -53,6 +57,8 @@ function orderDessert(div) {
   DessertSelected = DessertSelected.innerHTML;
   makeGreen();
   Price();
+  openWhatsApp();
+  orderText();
 }
 
 //Calculations
@@ -65,10 +71,11 @@ function Price() {
   ) {
     FinalPrice = (FoodPrice + DrinkPrice + DessertPrice).toFixed(2);
   }
-  makeGreen();
+  openWhatsApp();
+  orderText();
 }
 
-//Confirm Order Button
+//Bottom Menu and Confirm Menu
 function makeGreen() {
   if (
     FoodPrice !== undefined &&
@@ -81,21 +88,67 @@ function makeGreen() {
     button.classList.add("confirm");
     button.classList.add("hover");
     button.classList.remove("button-color");
-
-    let message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
-    - Prato: ${FoodSelected}
-    - Bebida: ${DrinkSelected}
-    - Sobremesa: ${DessertSelected}
-    Total: R$ ${FinalPrice}`);
-    let link = document.querySelector(".bottom-menu a")
-    link.setAttribute("href", "https://wa.me/5548996994427?text="+message);
   }
 }
-function confirmOrder(button) {
+
+let Name;
+let Location;
+function confirmOrder() {
   if (
     FoodPrice !== undefined &&
     DrinkPrice !== undefined &&
     DessertPrice !== undefined
   ) {
+    const EnableConfirm = document.querySelector(".confirm-menu");
+    EnableConfirm.classList.remove("hidden");
+    EnableConfirm.classList.add("flex");
+    Name = prompt("Nos informe seu nome, por favor:");
+    Location = prompt("Nos informe seu endereço, por favor:");
   }
+}
+
+function openWhatsApp() {
+  let message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+  - Prato: ${FoodSelected}
+  - Bebida: ${DrinkSelected}
+  - Sobremesa: ${DessertSelected}
+  Total: R$ ${FinalPrice}
+
+  Nome: ${Name}
+  Endereço: ${Location}`);
+  let link = document.querySelector(".confirm-menu a");
+  link.setAttribute("href", "https://wa.me/5548996994427?text=" + message);
+}
+
+function closeMenu() {
+  const CloseMenu = document.querySelector(".confirm-menu");
+  CloseMenu.classList.remove("flex");
+  CloseMenu.classList.add("hidden");
+}
+
+function orderText() {
+  const FoodText = document.querySelector(".food-name");
+  FoodText.innerHTML = `${FoodSelected}`;
+  const FoodCost = document.querySelector(".food-price");
+  FoodValue = document.querySelector(".food .selected h2 span");
+  FoodValue = FoodValue.innerHTML;
+  FoodCost.innerHTML = `${FoodValue}`;
+
+  const DrinkText = document.querySelector(".drink-name");
+  DrinkText.innerHTML = `${DrinkSelected}`;
+  const DrinkCost = document.querySelector(".drink-price");
+  DrinkValue = document.querySelector(".drink .selected h2 span");
+  DrinkValue = DrinkValue.innerHTML;
+  DrinkCost.innerHTML = `${DrinkValue}`;
+
+  const DessertText = document.querySelector(".dessert-name");
+  DessertText.innerHTML = `${DessertSelected}`;
+  const DessertCost = document.querySelector(".dessert-price");
+  DessertValue = document.querySelector(".dessert .selected h2 span");
+  DessertValue = DessertValue.innerHTML;
+  DessertCost.innerHTML = `${DessertValue}`;
+
+  const TotalCost = document.querySelector(".total");
+  FinalPrice = FinalPrice.replace(".", ",");
+  TotalCost.innerHTML = `R$ ${FinalPrice}`;
 }
